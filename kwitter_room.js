@@ -23,3 +23,9 @@ function logout(){
     window.location="index.html";
     localStorage.removeItem("user_name");
 }
+function  addRoom(){
+  name_room=document.getElementById("room_name").value;
+  firebase.database().ref("/").child(name_room).update({
+      Hobby:"Gaming"
+  });
+}
